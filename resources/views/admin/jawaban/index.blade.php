@@ -14,6 +14,8 @@
 						<thead>
 							<th>No</th>
 							<th>Aksi</th>
+							<th>Kategori</th>
+							<th>Judul Pertanyaan</th>
 							<th>jawaban</th>
 						</thead>
 						<tbody>
@@ -27,6 +29,8 @@
 								@include('admin.template.utils.delete', ['url' => url('admin/jawaban', $jawaban->id)])
 								</div>
 							</td>
+							<td>{{$jawaban->pertanyaan->kategori->nama}}</td>
+							<td>{{$jawaban->pertanyaan->judul}}</td>
 							<td>{{$jawaban->jawaban}}</td>
 						 </tr>
 						 	@endforeach

@@ -13,6 +13,20 @@
 						@csrf
 						@method("PUT")
 
+					<div class="form-group">
+						<label for="" class="control-label">Id_Pertanyaan</label>
+						<input name="id_pertanyaan" class="form-control" value="{{$list_jawaban->pertanyaan->id}}" readonly>
+					</div>
+
+					<div class="form-group">
+						<label for="" class="control-label">Kategori</label>
+						<input name="" class="form-control" value="{{$list_jawaban->pertanyaan->kategori->nama}}" readonly>
+					</div>
+
+					<div class="form-group">
+						<label for="" class="control-label">Pertanyaan</label>
+						<input name="" class="form-control" value="{{$list_jawaban->pertanyaan->judul}}" readonly>
+					</div>
 
 					<div class="form-group">
 						<label for="" class="control-label">Jawaban</label>

@@ -12,7 +12,7 @@ class Jawaban extends Model
     protected $table = 'jawaban';
 
     function pertanyaan(){
-   		return $this->belongsTo(Pertanyan::class, 'id_pertanyaan');
+   		return $this->belongsTo(Pertanyaan::class, 'id_pertanyaan');
    	}
 
 }

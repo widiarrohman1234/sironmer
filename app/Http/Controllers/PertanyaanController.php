@@ -9,7 +9,8 @@ use App\Models\Kategori;
 class PertanyaanController extends Controller
 {
     function index(){
-    	$data['list_pertanyaan'] = Pertanyaan::all();
+    	$id_user = request()->user()->id;
+		$data['list_pertanyaan'] = Pertanyaan::where('id_user', $id_user)->get();
     	return view('admin.pertanyaan.index', $data);
     }
 

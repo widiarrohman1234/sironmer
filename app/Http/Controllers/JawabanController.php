@@ -9,8 +9,9 @@ use App\Models\Pertanyaan;
 
 class JawabanController extends Controller
 {
-        function index(){
-    	$data['list_jawaban'] = Jawaban::all();
+    function index(){
+    	$id_user = request()->user()->id;
+		$data['list_jawaban'] = Jawaban::where('id_user', $id_user)->get();
     	return view('admin.jawaban.index', $data);
     }
 
